@@ -1,0 +1,56 @@
+/*----------------------------------------Mixin tamaños boton-----------------------------------------*/
+//mixin size button
+@mixin button-size($size) {
+    display: inline-flex;
+    align-items: center;  
+    @if $size == s {
+        @include responsive-font-by-map(subTitle6-size);
+        @include weight-font-by-map(font-weight-b);
+        @include padding(calc(8/16),calc(16/16));
+        @include border-radius(32px);
+        @include line-height-font-by-map (line-h-20);
+        gap: 0.5rem;
+    } @else if $size == m {
+        @include responsive-font-by-map(subTitle5-size);
+        @include weight-font-by-map(font-weight-b);
+        @include padding(calc(12/16),calc(24/16));
+        @include border-radius(32px);
+        @include line-height-font-by-map (line-h-24);
+        gap: 0.5rem;
+    } @else if $size == l {
+        @include responsive-font-by-map(subTitle4-size);
+        @include weight-font-by-map(font-weight-b);
+        @include padding(calc(16/16),calc(32/16));
+        @include border-radius(32px);
+        @include line-height-font-by-map (line-h-28);
+        gap: 0.5rem;
+    } @else {
+        @warn "El tamaño #{$size} no está definido. Usa 's', 'm', 'l' .";
+    }
+}
+//mixin type buttons
+@mixin button-type($type, $color: null, $bgcolor: null) {
+    @if $type == primary {
+        background-color: $bgcolor;
+        color: $color;
+    } @else if $type == secondary {
+        background-color: $bgcolor;
+        color: $color;
+    } @else {
+        @warn "El tipo #{$type} no está definido. Usa 'primary', 'secondary'.";
+    }
+}
+//mixi size button icon
+// Ícono opcional (usando etiqueta <img>)
+@mixin button-icon($icon: null) {
+    @if $icon != null {
+        display: inline-flex;
+        align-items: center;
+        img.icon {
+            display: inline-block;
+            object-fit: contain;
+            
+        }
+    }
+} 
+

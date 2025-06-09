@@ -1,0 +1,19 @@
+$containerSpecificName: 'container';
+.#{$theme} {
+    margin: 0px;
+    .#{$containerSpecificName} {
+        max-width: 100%;
+        padding: 0px 24px;
+        margin: 0px auto;        
+        @include medias(tablet){
+            max-width: 100%;
+            padding: 0px 24px;
+            margin: 0px auto;            
+        }
+        @include medias(desktop) {
+            max-width: 1224px;
+            padding: 0px;
+            margin: 0px auto;            
+        }
+    }
+}

@@ -1,0 +1,416 @@
+// VARIABLES
+/*-------------------------------------------------TEMA-------------------------------------------------*/
+
+$theme: "theme-s";
+$component: "s-c";
+$object: "s-o";
+$style: "s-t";
+$js: "s-js";
+
+/*--------------------------------------COLORES landing---------------------------------------------*/
+
+//==== Color palette ====
+//---Primary Color------
+//Red -landing
+$landing-100: #76a67d;
+$landing-80:  #8bb792;
+$landing-60:  #a0c7a6;
+$landing-40:  #b5d8bb;
+$landing-20:  #cae8cf;
+//interation - landing
+//yellow
+$yellow-100: #ffa500;
+$yellow-80: #fcb430;
+$yellow-60: #fac461;
+$yellow-40: #f7d391;
+$yellow-20: #f5e3c2;
+//orange
+$orange-100: #fa8523;
+$orange-80: #f89b4c;
+$orange-60: #f7b176;
+$orange-40: #f7b176;
+$orange-20: #f4dcc9;
+//white
+$withe-100: #ffffff;
+$withe-80: #ffffffcc;
+$withe-60: #ffffff8c;
+$withe-40: #ffffff80;
+$withe-20: #ffffff80;
+//black
+$black-100: #000000;
+$black-80: #00000080;
+$black-60: #00000099;
+$black-40: #00000066;
+$black-20: #00000033;
+//Accent
+$a-primary: #323232;
+$a-secondary: #808080;
+$a-tertiary: #bbbbbb;
+$a-disabled: #d4d4d4;
+$a-disabled-text: #ffefef;
+//Background
+$bg-levelOne: #f2f2f2;
+$bg-levelTwo: #ffffff;
+$bg-levelGradient: linear-gradient(167.91deg, #f8f8f8 0%, #ebeef5 100%);
+// Colores de fondo para Lightbox
+$bg-lightbox-photo: rgba(0, 0, 0, 0.7);
+$bg-lightbox-modal: rgba(0, 0, 0, 0.8);
+$bg-lightbox-hero: linear-gradient(53.49deg, #000000 0%, #000000 30.52%, rgba(0, 0, 0, 0) 62.29%);
+//glass
+$g-primary-fill: linear-gradient(69.49deg, rgba(255, 255, 255, 0.5) 1.3%, rgba(255, 255, 255, 0.4) 100%);
+$g-primary-stroke: linear-gradient(250.94deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+$g-secondary-fill: linear-gradient(29.86deg, rgba(244, 244, 244, 0.4) 0%, rgba(244, 244, 244, 0.2) 98.06%);
+$g-secondary-stroke: linear-gradient(
+  29.03deg,
+  rgba(244, 244, 244, 0.8) 0%,
+  rgba(244, 244, 244, 0.4) 100%,
+  rgba(255, 255, 255, 0.8) 100%
+);
+//status
+$success: #32aa32;
+$error: #b3261e;
+$alert: #fa8523;
+$input-active: #859ece;
+$input-error: #cf6679;
+//red-gradient
+$red-gradient: linear-gradient(180deg, #dd141d 0%, #a40000 100%);
+
+//Todos los colores bajo una sola variable bg-color
+$colores: (
+  landing-100: $landing-100,
+  landing-80: $landing-80,
+  landing-60: $landing-60,
+  landing-40: $landing-40,
+  landing-20: $landing-20,
+  yellow-100: $yellow-100,
+  yellow-80: $yellow-80,
+  yellow-60: $yellow-60,
+  yellow-40: $yellow-40,
+  yellow-20: $yellow-20,
+  orange-100: $orange-100,
+  orange-80: $orange-80,
+  orange-60: $orange-60,
+  orange-40: $orange-40,
+  orange-20: $orange-20,
+  withe-100: $withe-100,
+  withe-80: $withe-80,
+  withe-60: $withe-60,
+  withe-40: $withe-40,
+  withe-20: $withe-20,
+  black-100: $black-100,
+  black-80: $black-80,
+  black-60: $black-60,
+  black-40: $black-40,
+  black-20: $black-20,
+  a-primary: $a-primary,
+  a-secondary: $a-secondary,
+  a-tertiary: $a-tertiary,
+  a-disabled: $a-disabled,
+  a-disabled-text: $a-disabled-text,
+  bg-levelOne: $bg-levelOne,
+  bg-levelTwo: $bg-levelTwo,
+  bg-levelGradient: $bg-levelGradient,
+  bg-lightbox-photo: $bg-lightbox-photo,
+  bg-lightbox-modal: $bg-lightbox-modal,
+  bg-lightbox-hero: $bg-lightbox-hero,
+  g-primary-fill: $g-primary-fill,
+  g-primary-stroke: $g-primary-stroke,
+  g-secondary-fill: $g-secondary-fill,
+  g-secondary-stroke: $g-secondary-stroke,
+  success: $success,
+  error: $error,
+  alert: $alert,
+  input-active: $input-active,
+  input-error: $input-error,
+  red-gradient: $red-gradient
+);
+//----------------------------------------buttons-color----------------------------------------------------
+//----------------------------------button-primary
+//-----------------------------------button-primary
+$btn-primary-bg: #76a67d;
+$btn-primary-color: #ffffff;
+$btn-primary-hover-bg: #8bb792;
+$btn-primary-hover-color: #ffffff;
+$btn-primary-disabled-bg: #b5d8bb;
+$btn-primary-disabled-color: #f0f5f1;
+
+//-----------------------------------button-primary-white
+$btn-primary-w-bg: #ffffff;
+$btn-primary-w-color: #76a67d;
+$btn-primary-w-hover-bg: #ffffff;
+$btn-primary-w-hover-color: #76a67d;
+$btn-primary-w-disabled-bg: #ffffffcc;
+$btn-primary-w-disabled-color: #bbbbbb;
+
+//-----------------------------------button-secondary
+$btn-secondary-bg: transparent;
+$btn-secondary-color-2: #76a67d;
+$btn-secondary-outline-color-2: #76a67d;
+$btn-secondary-hover-bg: #76a67d;
+$btn-secondary-hover-color-2: #ffffff;
+$btn-secondary-hover-outline-color-2: #76a67d;
+$btn-secondary-disabled-bg: transparent;
+$btn-secondary-disabled-color: #b5d8bb;
+$btn-secondary-disabled-outline-color: #b5d8bb;
+
+//-----------------------------------button-secondary-white
+$btn-secondary-w-bg: transparent;
+$btn-secondary-w-color: #ffffff;
+$btn-secondary-w-outline-color: #ffffff;
+$btn-secondary-w-hover-bg: transparent;
+$btn-secondary-w-hover-color: #ffffff;
+$btn-secondary-w-hover-outline-color: #ffffff;
+$btn-secondary-w-disabled-bg: transparent;
+$btn-secondary-w-disabled-color: #ffffffcc;
+$btn-secondary-w-disabled-outline-color: #ffffffcc;
+
+
+// Todos los colores bajo una sola variable
+$botones: (
+  btn-primary-bg: $btn-primary-bg,
+  btn-primary-color: $btn-primary-color,
+  btn-primary-hover-bg: $btn-primary-hover-bg,
+  btn-primary-hover-color: $btn-primary-hover-color,
+  btn-primary-disabled-bg: $btn-primary-disabled-bg,
+  btn-primary-disabled-color: $btn-primary-disabled-color,
+  btn-primary-w-bg: $btn-primary-w-bg,
+  btn-primary-w-color: $btn-primary-w-color,
+  btn-primary-w-hover-bg: $btn-primary-w-hover-bg,
+  btn-primary-w-hover-color: $btn-primary-w-hover-color,
+  btn-primary-w-disabled-bg: $btn-primary-w-disabled-bg,
+  btn-primary-w-disabled-color: $btn-primary-w-disabled-color,
+  btn-secondary-bg: $btn-secondary-bg,
+  btn-secondary-color-2: $btn-secondary-color-2,
+  btn-secondary-outline-color-2: $btn-secondary-outline-color-2,
+  btn-secondary-hover-bg: $btn-secondary-hover-bg,
+  btn-secondary-hover-color-2: $btn-secondary-hover-color-2,
+  btn-secondary-hover-outline-color-2: $btn-secondary-outline-color-2,
+  btn-secondary-disabled-bg: $btn-secondary-disabled-bg,
+  btn-secondary-disabled-color: $btn-secondary-disabled-color,
+  btn-secondary-disabled-outline-color: $btn-secondary-disabled-outline-color,
+  btn-secondary-w-bg: $btn-secondary-w-bg,
+  btn-secondary-w-color: $btn-secondary-w-color,
+  btn-secondary-w-outline-color: $btn-secondary-w-outline-color,
+  btn-secondary-w-hover-bg: $btn-secondary-w-hover-bg,
+  btn-secondary-w-hover-color: $btn-secondary-w-hover-color,
+  btn-secondary-w-hover-outline-color: $btn-secondary-w-hover-outline-color,
+  btn-secondary-w-disabled-bg: $btn-secondary-w-disabled-bg,
+  btn-secondary-w-disabled-color: $btn-secondary-w-disabled-color,
+  btn-secondary-w-disabled-outline-color: $btn-secondary-w-disabled-outline-color
+);
+/*---------- font color ------------*/
+$display-1-color: #323232;
+$display-2-color: #323232;
+$display-3-color: #323232;
+$display-4-color: #323232;
+$h1-color: #323232;
+$h2-color: #323232;
+$h3-color: #323232;
+$h4-color: #323232;
+$h5-color: #323232;
+$h6-color: #323232;
+$subTitle1-color: #323232;
+$subTitle2-color: #323232;
+$subTitle3-color: #323232;
+$subTitle4-color: #323232;
+$subTitle5-color: #323232;
+$subTitle6-color: #323232;
+$body1-color: #323232;
+$body2-color: #323232;
+$body3-color: #323232;
+$body4-color: #323232;
+$body5-color: #323232;
+$body6-color: #323232;
+$link-1: #323232;
+$link-2: #323232;
+$link-3: #323232;
+$link-4: #323232;
+$caption-1: #323232;
+$caption-2: #323232;
+$p-color: #323232;
+$span-color: #323232;
+/*------- color  white fonts-------*/
+$display-1-color-white: #fff;
+$display-2-color-white: #fff;
+$display-3-color-white: #fff;
+$display-4-color-white: #fff;
+$h1-color-white: #fff;
+$h2-color-white: #fff;
+$h3-color-white: #fff;
+$h4-color-white: #fff;
+$h5-color-white: #fff;
+$h6-color-white: #fff;
+$subTitle1-color-white: #fff;
+$subTitle2-color-white: #fff;
+$subTitle3-color-white: #fff;
+$subTitle4-color-white: #fff;
+$subTitle5-color-white: #fff;
+$subTitle6-color-white: #fff;
+$body1-color-white: #fff;
+$body2-color-white: #fff;
+$body3-color-white: #fff;
+$body4-color-white: #fff;
+$body5-color-white: #fff;
+$body6-color-white: #fff;
+$link-1-white: #fff;
+$link-2-white: #fff;
+$link-3-white: #fff;
+$link-4-white: #fff;
+$caption-1-white: #fff;
+$caption-2-white: #fff;
+$p-color-white: #fff;
+$span-color-white: #fff;
+
+$fonts-color: (
+  display-1-color: $display-1-color,
+  display-2-color: $display-2-color,
+  display-3-color: $display-3-color,
+  display-4-color: $display-4-color,
+  h1-color: $h1-color,
+  h2-color: $h2-color,
+  h3-color: $h3-color,
+  h4-color: $h4-color,
+  h5-color: $h5-color,
+  h6-color: $h6-color,
+  subTitle1-color: $subTitle1-color,
+  subTitle2-color: $subTitle2-color,
+  subTitle3-color: $subTitle3-color,
+  subTitle4-color: $subTitle4-color,
+  subTitle5-color: $subTitle5-color,
+  subTitle6-color: $subTitle6-color,
+  body1-color: $body1-color,
+  body2-color: $body2-color,
+  body3-color: $body3-color,
+  body4-color: $body4-color,
+  body5-color: $body5-color,
+  body6-color: $body6-color,
+  link-1: $link-1,
+  link-2: $link-2,
+  link-3: $link-3,
+  link-4: $link-4,
+  caption-1: $caption-1,
+  caption-2: $caption-2,
+  span-color: $span-color,
+  display-1-color-white: $display-1-color-white,
+  display-2-color-white: $display-2-color-white,
+  display-3-color-white: $display-3-color-white,
+  display-4-color-white: $display-4-color-white,
+  h1-color-white: $h1-color-white,
+  h2-color-white: $h2-color-white,
+  h3-color-white: $h3-color-white,
+  h4-color-white: $h4-color-white,
+  h5-color-white: $h5-color-white,
+  h6-color-white: $h6-color-white,
+  subTitle1-color-white: $subTitle1-color-white,
+  subTitle2-color-white: $subTitle2-color-white,
+  subTitle3-color-white: $subTitle3-color-white,
+  subTitle4-color-white: $subTitle4-color-white,
+  subTitle5-color-white: $subTitle5-color-white,
+  subTitle6-color-white: $subTitle6-color-white,
+  body1-color-white: $body1-color-white,
+  body2-color-white: $body2-color-white,
+  body3-color-white: $body3-color-white,
+  body4-color-white: $body4-color-white,
+  body5-color-white: $body5-color-white,
+  body6-color-white: $body6-color-white,
+  link-1-white: $link-1-white,
+  link-2-white: $link-2-white,
+  link-3-white: $link-3-white,
+  link-4-white: $link-4-white,
+  caption-1-white: $caption-1-white,
+  caption-2-white: $caption-2-white,
+  p-color-white: $p-color-white,
+  span-color-white: $span-color-white
+);
+
+/*-------------------------------------------------BREACKPOINTS VASS-------------------------------------------------*/
+$mobile: 360px;
+$tablet: 800px;
+$desktop: 1024px;
+$allBreakpoints: (
+  mobile: $mobile,
+  tablet: $tablet,
+  desktop: $desktop
+);
+/*---------------------------------------------fonts -------------------------------------------------------------------------------*/
+//
+$font-sizes: (
+  display-1-size: calc(128 / 16) + rem,
+  display-2-size: calc(112 / 16) + rem,
+  display-3-size: calc(96 / 16) + rem,
+  display-4-size: calc(80 / 16) + rem,
+  h1-size: calc(72 / 16) + rem,
+  h2-size: calc(56 / 16) + rem,
+  h3-size: calc(48 / 16) + rem,
+  h4-size: calc(40 / 16) + rem,
+  subTitle1-size: calc(36 / 16) + rem,
+  subTitle2-size: calc(32 / 16) + rem,
+  subTitle3-size: calc(24 / 16) + rem,
+  subTitle4-size: calc(20 / 16) + rem,
+  subTitle5-size: calc(16 / 16) + rem,
+  subTitle6-size: calc(14 / 16) + rem,
+  body1-size: calc(36 / 16) + rem,
+  body2-size: calc(32 / 16) + rem,
+  body3-size: calc(24 / 16) + rem,
+  body4-size: calc(20 / 16) + rem,
+  body5-size: calc(16 / 16) + rem,
+  // este es el p del proyecto chic@s ^^
+  body6-size: calc(14 / 16) + rem,
+  link-1-size: calc(24 / 16) + rem,
+  link-2-size: calc(20 / 16) + rem,
+  link-3-size: calc(16 / 16) + rem,
+  link-4-size: calc(14 / 16) + rem,
+  caption-1: calc(12 / 16) + rem,
+  caption-2: calc(10 / 16) + rem
+);
+//==== Font family ====
+
+$font-family: "Lato", sans-serif;
+/*--------------------------pesos fonts-------------------*/
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+// Todos los weight bajo una sola variable
+$font-weights: (
+  font-weight-r: $font-weight-regular,
+  font-weight-b: $font-weight-bold
+);
+
+/*-----------------line---heigth----fonts------------------------------------------*/
+$font-line-height: (
+  line-h-136: calc(136 / 16) + rem,
+  line-h-120: calc(120 / 16) + rem,
+  line-h-104: calc(104 / 16) + rem,
+  line-h-88: calc(88 / 16) + rem,
+  line-h-80: calc(80 / 16) + rem,
+  line-h-64: calc(64 / 16) + rem,
+  line-h-56: calc(56 / 16) + rem,
+  line-h-48: calc(48 / 16) + rem,
+  line-h-44: calc(44 / 16) + rem,
+  line-h-40: calc(40 / 16) + rem,
+  line-h-32: calc(32 / 16) + rem,
+  line-h-28: calc(28 / 16) + rem,
+  line-h-24: calc(24 / 16) + rem,
+  line-h-20: calc(20 / 16) + rem
+);
+
+/*---------------------------------------------------------Variables stroke----------------------------------------------------*/
+$stroke: (
+  stroke-0: 1px solid,
+  stroke-1: 2px solid,
+  stroke-2: 4px solid,
+  stroke-3: 6px solid
+);
+
+// Root
+:root {
+  @each $key, $color in $colores {
+    --#{$key}: #{$color};
+  }
+  @each $key, $boton in $botones {
+    --#{$key}: #{$boton};
+  }
+  @each $key, $fonts in $fonts-color {
+    --#{$key}: #{$fonts};
+  }
+  --font-family: #{$font-family};
+}

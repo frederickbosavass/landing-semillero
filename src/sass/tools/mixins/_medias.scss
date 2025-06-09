@@ -1,0 +1,35 @@
+/*----------------------------------------Mixin media Querys-----------------------------------------*/
+/*
+NOMENCLATURA SELECTORES DE PANTALLAS
+  mobile : estilos hasta maximo resolucion tableta grande
+  desktop : estilos a partir de escritorio
+  tablet : estilos a partir de tableta pequeña hasta tableta grande
+  tablet_desktop : estilo a partir de tableta pequeña
+  big_desktop : estilos a partir de escritorio pantallas Grandes!
+NOTA: Este mixin es para todo el trabajo de media querys 
+NOTA 2: Recuerde que la construccion de maquetas es FIRST MOBILE por ende la media de mobile solo sera usada en casos muy especificos.
+USO: Su uso es en las hojas de estilos de los componentes usando un include 
+y pasando el parametro de la nomenclatura selectores de pantalla
+EJ: 
+  @include medias(tablet_desktop) {
+    //Escriba aqui el codigo para esta Media-Query
+    color; red;
+  }
+*/
+@mixin medias($media) {
+    @if $media == mobile {
+      @media (max-width: calc(#{$tablet} - 1px) ) { @content; }
+    }
+    @else if $media == tablet {
+      @media (min-width: #{$tablet}) and (max-width: #{$desktop}) { @content; }
+    }
+    @else if $media == desktop {
+      @media (min-width: #{$desktop}) { @content; }
+    }
+    @else if $media == mobile_tablet {
+      @media (max-width: calc(#{$desktop} - 1px)) { @content; }
+    }
+    @else if $media == tablet_desktop {
+      @media (min-width: #{$tablet}) { @content; }
+    }
+  }

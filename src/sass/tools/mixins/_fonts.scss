@@ -1,0 +1,67 @@
+
+    
+    /*
+    USOS: En el scss del componente usar como @include ver en variables los valores y sus variables
+    EJ: h1{
+        @include responsive-font-by-map(h1);
+        }
+    */
+    
+    @mixin responsive-font-by-map($element) {
+        font-size: map-get($font-sizes, $element);
+    }
+    /*
+    USOS: En el scss del componente usar como @include ver en variables los valores y sus variables
+    EJ: h1{
+        @include weight-font-by-map(font-weight-lit);
+        }
+    */
+    @mixin weight-font-by-map($element) {
+        font-weight: map-get($font-weights, $element);
+    }
+    /*
+    USOS: En el scss del componente usar como @include ver en variables los valores y sus variables
+    EJ: h1{
+        @include line-height-font-by-map(line-h-96);
+        }
+    */
+    @mixin line-height-font-by-map($element) {
+        line-height: map-get($font-line-height, $element);
+    }
+    /*
+    USOS: En el html del componente usar como clase la nomenclatura font-size-Etiqueta o body o sm para small text
+    EJ: <h1 class="font-size-h1"></h1>
+    */
+    @each $key, $size in $font-sizes {
+        .font-size {
+            &-#{$key} {
+                @include responsive-font-by-map($key);                
+            }
+        }
+    }
+    .#{$theme} {
+        h1{
+            @include responsive-font-by-map(h1);
+            //@include weight-font-by-map(font-weight-lit);
+            //@include line-height-font-by-map(line-h-55);        
+    
+        }
+        h2{
+            @include responsive-font-by-map(h2); 
+        }
+        h3 {
+            @include responsive-font-by-map(h3);
+        }
+        h4 {
+            @include responsive-font-by-map(h4);
+        }
+        h5 {
+            @include responsive-font-by-map(h5);
+        }
+        p{
+            @include responsive-font-by-map(Body1);
+        }
+       
+        
+    }
+

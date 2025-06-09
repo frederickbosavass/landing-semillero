@@ -1,0 +1,142 @@
+$componentSpecificName: 'button';
+.#{$theme} {
+    .#{$object} {
+        &-#{$componentSpecificName} {   
+            text-decoration: none; 
+            width: fit-content;        
+            &.#{$style}-#{$componentSpecificName} {
+                text-decoration: none;               
+                &__size-s {
+                    @include button-size(s);
+                    .icon{
+                        width: 16px;
+                        height: 16px;
+                    }                   
+                }
+                &__size-m {
+                    @include button-size(m);
+                    .icon{
+                        width: 24px;
+                        height: 24px;
+                    }                    
+                }
+                &__size-l {
+                    @include button-size(l);
+                    .icon{
+                        width: 24px;
+                        height: 24px;
+                    }                     
+                }
+                
+                &__primary{
+                    @include button-type(primary,var(--btn-primary-color),var(--btn-primary-bg));
+                    &:hover{
+                        @include button-type(primary,var(--btn-primary-hover-color),var(--btn-primary-hover-bg));
+                        text-decoration:  not-allowed;
+                    }
+                    &.#{$style}-#{$componentSpecificName}--disabled, &.disabled{
+                        @include button-type(primary,var(--btn-primary-disabled-color),var(--btn-primary-disabled-bg));
+                        cursor: not-allowed;
+                    }
+                    &-icon{
+                        @include button-type(primary,var(--btn-primary-color),var(--btn-primary-bg));                        
+                        &:hover{
+                            @include button-type(primary,var(--btn-primary-hover-color),var(--btn-primary-hover-bg));
+                            text-decoration: none;                            
+                        } 
+                        &.#{$style}-#{$componentSpecificName}--disabled, &:disabled{
+                            @include button-type(primary,var(--btn-primary-disabled-color),var(--btn-primary-disabled-bg));                            
+                            cursor: not-allowed;
+                        }                      
+                    }
+                    
+                }
+                &__primary--white{
+                    @include button-type(primary,var(--btn-primary-w-color),var(--btn-primary-w-bg));
+                    &:hover{
+                        @include button-type(primary,var(--btn-primary-w-hover-color),var(--btn-primary-w-hover-bg));
+                        text-decoration:  not-allowed;
+                    }
+                    &.#{$style}-#{$componentSpecificName}--disabled, &.disabled{
+                        @include button-type(primary,var(--btn-primary-w-disabled-color),var(--btn-primary-w-disabled-bg));
+                        cursor: not-allowed;
+                    }
+                    &-icon{
+                        @include button-type(primary,var(--btn-primary-w-color),var(--btn-primary-w-bg));                        
+                        &:hover{
+                            @include button-type(primary,var(--btn-primary-w-hover-color),var(--btn-primary-w-hover-bg));
+                            text-decoration: not-allowed;                            
+                        } 
+                        &.#{$style}-#{$componentSpecificName}--disabled, &:disabled{
+                            @include button-type(primary,var(--btn-primary-w-disabled-color),var(--btn-primary-w-disabled-bg));                            
+                            cursor: not-allowed;        
+                        }                      
+                    }
+                    
+                }
+                &__secondary{
+                    @include button-type(secondary,var(--btn-secondary-color-2),var(--btn-secondary-bg));
+                    outline: 1px solid var(--btn-secondary-outline-color-2);
+                    &:hover{
+                        @include button-type(secondary,var(--btn-secondary-hover-color-2),var(--btn-secondary-hover-bg));
+                        text-decoration: none;
+                        outline: not-allowed;
+                    }
+                    &.#{$style}-#{$componentSpecificName}--disabled, &.disabled{
+                        @include button-type(secondary,var(--btn-secondary-disabled-color),var(--btn-secondary-disabled-bg));
+                        outline:1px solid var(--btn-secondary-disabled-outline-color) ;
+                        cursor: not-allowed;
+                    }
+                    &-icon{
+                        @include button-type(secondary,var(--btn-secondary-color-2),var(--btn-secondary-bg));
+                        @include button-icon (true); 
+                        outline: 1px solid var(--btn-secondary-outline-color-2);                       
+                        &:hover{
+                            @include button-type(secondary,var(--btn-secondary-hover-color-2),var(--btn-secondary-hover-bg));
+                            text-decoration: none;  
+                            outline: none;                          
+                        } 
+                        &.#{$style}-#{$componentSpecificName}--disabled, &:disabled{
+                            @include button-type(secondary,var(--btn-secondary-disabled-color),var(--btn-secondary-disabled-bg));
+                            outline:1px solid var(--btn-secondary-disabled-outline-color) ;
+                            cursor: not-allowed;
+                        }                      
+                    }
+                    
+                }
+                &__secondary--white{
+                    @include button-type(secondary,var(--btn-secondary-w-color),var(--btn-secondary-w-bg));
+                    outline: 1px solid var(--btn-secondary-w-outline-color);
+                    &:hover{
+                        @include button-type(secondary,var(--btn-secondary-w-hover-color),var(--btn-secondary-w-hover-bg));
+                        text-decoration: none;
+                        outline: 1px solid var(--btn-secondary-w-outline-color);
+                    }
+                    &.#{$style}-#{$componentSpecificName}--disabled, &.disabled{
+                        @include button-type(secondary,var(--btn-secondary-w-disabled-color),var(--btn-secondary-w-disabled-bg));
+                        outline:1px solid var(--btn-secondary-w-disabled-outline-color) ;
+                        cursor: not-allowed;
+                    }
+                    &-icon{
+                        @include button-type(secondary,var(--btn-secondary-w-color),var(--btn-secondary-w-bg));
+                        @include button-icon (true);   
+                        outline: 1px solid var(--btn-secondary-w-outline-color);                     
+                        &:hover{
+                            @include button-type(secondary,var(--btn-secondary-w-hover-color),var(--btn-secondary-w-hover-bg));
+                            text-decoration: none;  
+                            outline: 1px solid var(--btn-secondary-w-outline-color);                          
+                        } 
+                        &.#{$style}-#{$componentSpecificName}--disabled, &:disabled{
+                            @include button-type(secondary,var(--btn-secondary-w-disabled-color),var(--btn-secondary-w-disabled-bg));
+                            outline:1px solid var(--btn-secondary-w-disabled-outline-color) ;
+                            cursor: not-allowed;
+                        }                      
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    
+}

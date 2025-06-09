@@ -1,0 +1,23 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "int",
+          "defaultValue": "1",
+          "label": "Número de Imágenes Apps",
+          "name": "numberCardsCH",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              { "value": "1" },
+              { "value": "2" },
+              { "value": "3" }
+            ]
+          }
+        }
+      ],
+      "label": "Configuraciones generales del contenedor"
+    }
+  ]
+}

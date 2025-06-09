@@ -1,0 +1,175 @@
+$componentSpecificName: "property";
+
+.has-edit-mode-menu {
+    .#{$theme} {
+        .#{$component}-#{$componentSpecificName} {
+            &__msg {
+                display: block;
+            }
+        }
+    }
+}
+
+$color-white: #ffffff;
+$color-gray: #f0f0f0;
+$color-gray-dark: gray;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-shadow-hover: rgba(0, 0, 0, 0.2);
+$color-primary: #d16767;
+$color-button-bg: #b3d9bb;
+$color-button-text: green;
+$border-radius: 16px;
+$button-border-radius: 20px;
+$gap: 20px;
+
+/* Breakpoints */
+$breakpoints: (
+    sm: 743px
+);
+
+/* Mixins */
+@mixin respond-to($breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+.#{$theme} {
+    .#{$component}-#{$componentSpecificName} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $gap;
+        padding: $gap;
+    }
+
+    /* Property Card */
+    .property__card {
+        width: 630px;
+        display: flex;
+        border-radius: $border-radius;
+        background-color: $color-white;
+        cursor: pointer;
+        box-shadow: 0 0 10px $color-shadow;
+
+        &:hover {
+            box-shadow: 0 0 10px $color-shadow-hover;
+        }
+
+        @include respond-to(sm) {
+            display: block;
+            width: 260px;
+            height: 376px;
+
+            .property__price {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+
+            .property__title {
+                font-size: 16px;
+            }
+        }
+
+        .property__content {
+            width: 35%;
+            height: auto;
+            border-radius: $border-radius;
+            position: relative;
+
+            @include respond-to(sm) {
+                width: 100%;
+            }
+
+            .property__image {
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+
+                @include respond-to(sm) {
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: $border-radius;
+                }
+            }
+
+            .property__favorite-icon {
+                width: 30px;
+                height: 30px;
+                background-color: $color-white;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: 20px;
+                    color: $color-primary;
+                }
+            }
+        }
+
+        .property__details {
+            width: 65%;
+            height: auto;
+            padding: 20px;
+            position: relative;
+            border-radius: $border-radius;
+
+            @include respond-to(sm) {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .s-o-button {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+
+                @include respond-to(sm) {
+                    top: 15px;
+                    right: 15px;
+                }
+            }
+
+            .property__features {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+                padding-top: 16px;
+                border-top: 3px solid $color-gray;
+            }
+
+            .property__feature {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .property__feature-value {
+                    font-weight: bold;
+                }
+
+                .property__feature-unit {
+                    font-weight: bold;
+                    color: $color-gray-dark;
+                    font-size: 12px;
+                }
+            }
+
+            .property__description {
+                font-size: 14px;
+                color: $color-gray-dark;
+            }
+        }
+    }
+
+    .property__title {
+        font-weight: bold;
+        margin-top: 12px;
+        margin-bottom: 14px;
+    }
+}

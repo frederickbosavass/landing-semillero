@@ -1,0 +1,21 @@
+/*----------mixin de box-boder-radius-------------------------*/
+/*
+USOS: En el scss del componente usar como @include stroke en conjuto con su variable. Ver en variables los valores y sus variables
+    EJ: .clase-box{
+        @include border-radius(10px); para todo los lados 
+        @include border-radius(10px, 15px); Si se proporcionan dos valores, el primero se aplica a las esquinas superiores y el segundo a las inferiores.
+        @include border-radius(10px, 15px, 20px, 25px); Con cuatro valores, cada esquina recibe su valor correspondiente (en el orden CSS: arriba izquierda, arriba derecha, abajo derecha, abajo izquierda).
+        }
+*/
+
+    @mixin border-radius($top-left, $top-right: null, $bottom-right: null, $bottom-left: null) {
+        @if $top-right == null and $bottom-right == null and $bottom-left == null {
+        // Si solo se pasa un valor, aplica el mismo a todas las esquinas
+        border-radius: $top-left;
+        } @else {
+        // Si se pasan valores individuales, aplica cada uno por separado
+        border-radius: $top-left $top-right $bottom-right $bottom-left;
+        }
+    }
+
+

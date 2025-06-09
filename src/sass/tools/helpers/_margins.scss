@@ -1,0 +1,59 @@
+/*----------------------------------------Clases de margins-----------------------------------------*/
+/*
+NOMENCLATURA POSICION DEL MARGIN
+    t : top
+    b: bottom
+    l : left
+    r : right
+    x : left right
+    y : top bottom
+    xy : left right top bottom
+Nota: Este mixin esta construido para margins multiplos del 2
+USO: Usar la clase de usando la nomenclatura m-POSISION-TAMAÑODELMARGIN(MultiploDeDos)
+EJ: <a class="m-xy-12" href="#">Texto del enlace</a>
+*/ 
+.#{$theme} {
+    @for $i from 1 through 29 {
+        .m-t-#{$i*2} {
+            margin-top: $i*2 + px;
+        }
+        .m-b-#{$i*2} {
+            margin-bottom: $i*2 + px;
+        }
+        .m-l-#{$i*2} {
+            margin-left: $i*2 + px;
+        }
+        .m-r-#{$i*2} {
+            margin-right: $i*2 + px;
+        }
+        .m-y-#{$i*2} {
+            margin: $i*2 + px 0px;
+        }
+        .m-x-#{$i*2} {
+            margin: 0px $i*2 + px;
+        }
+        .m-xy-#{$i*2} {
+            margin: $i*2 + px;
+        }
+    }
+    
+}
+
+@mixin margin($top, $right: null, $bottom: null, $left: null) {
+    @if $right == null and $bottom == null and $left == null {
+      // Un solo valor para todos los lados
+    margin: #{$top}rem;
+    } @else if $bottom == null and $left == null {
+      // Dos valores: vertical y horizontal
+    margin: #{$top}rem #{$right}rem;
+    } @else if $left == null {
+      // Tres valores: arriba, horizontal y abajo
+    margin: #{$top}rem #{$right}rem #{$bottom}rem;
+    }  @else  {
+        // Cuatro valores: cada lado individual
+        margin: #{$top}rem #{$right}rem #{$bottom}rem #{$left}rem;
+    }
+}
+
+
+
