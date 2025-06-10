@@ -1,24 +1,18 @@
-
-
-@import 
-'./settings/_variables',
+@import './settings/_variables',
 './tools/mixins/medias',
 './settings/_container';
 
-@import 
-'./tools/mixins/fonts',
+@import './tools/mixins/fonts',
 './tools/mixins/radius',
 './tools/helpers/margins',
 './tools/helpers/paddings',
 './tools/mixins/buttons';
 
-@import
-'./generic/fonts-face';
+@import './generic/fonts-face';
 
-@import
-'./objects/buttons';
+@import './objects/buttons';
 
 
 //Importar componentes
-@import
-'../components/HU-00-example-card/HU-00-card-hotel.html.scss';
+@import '../components/HU-00-example-card/HU-00-card-hotel.html.scss',
+'../components/HU-00-modern-card/HU-00-modern-card.scss';
