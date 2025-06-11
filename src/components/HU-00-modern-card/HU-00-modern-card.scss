@@ -68,7 +68,6 @@ $componentSpecificName: "simple-card";
     gap: $spacing-xxl;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
 
     // Mixin para centrar contenido
     @mixin flex-center {
