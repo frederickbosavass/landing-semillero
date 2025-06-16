@@ -1,5 +1,3 @@
-
-
 @import 
 './settings/_variables',
 './tools/mixins/medias',
@@ -21,7 +19,8 @@
 
 //Importar componentes
 @import
-'../components/HU-00-example-card/HU-00-card-hotel.scss';
+'../components/HU-00-example-card/HU-00-card-hotel.scss',
+'../components/HU-00-simple-card/HU-00-simple-card.scss';
 @import
 '../components/HU-00-header/HU-00-header.scss';
 @import

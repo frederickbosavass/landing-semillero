@@ -1962,6 +1962,27 @@ html {
   margin-bottom: 14px;
 }
 
+.theme-s .s-c-card-william {
+  max-width: 300px;
+  border-width: 2px;
+  border-radius: 15px;
+  -o-border-image: linear-gradient(to left, #85c1e9, #00f, #bb8fce);
+     border-image: -webkit-gradient(linear, right top, left top, from(#85c1e9), color-stop(#00f), to(#bb8fce));
+     border-image: linear-gradient(to left, #85c1e9, #00f, #bb8fce);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.theme-s .s-c-card-william img {
+  width: 100%;
+}
+.theme-s .s-c-card-william .body {
+  padding: 15px;
+}
+.theme-s .s-c-card-william .footer {
+  padding: 0 15px 15px 15px;
+  text-align: right;
+}
+
 .theme-s .s-c-header-sem {
   background: #141318;
   display: -webkit-box;
