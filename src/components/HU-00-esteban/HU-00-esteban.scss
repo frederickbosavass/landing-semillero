@@ -3,6 +3,11 @@ $componentSpecificName: "card-esteban";
 .#{$theme} {
     .#{$component}-#{$componentSpecificName} {
 
+        .main-card{
+            display: flex;
+            justify-content: center;
+        }
+
         .card {
             width: 190px;
             background: white;
@@ -13,7 +18,6 @@ $componentSpecificName: "card-esteban";
         .card-image {
             background-color: rgb(236, 236, 236);
             width: 100%;
-            height: 130px;
             border-radius: 6px 6px 0 0;
         }
 
