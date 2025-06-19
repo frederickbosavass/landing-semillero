@@ -1,0 +1,118 @@
+$componentSpecificName: "filter";
+
+.#{$theme} {
+    .#{$component}-#{$componentSpecificName} {
+        $verde: #06a17b;
+        $azul-links: #0097a9;
+        $verde-exito: #04b58e;
+        $gris: #6c6c6c;
+        $gris-texto: #525252;
+        $gris-oscuro: #2d2d2d;
+        $gris-muy-oscuro: #222222;
+        $gris-borde: #989898;
+        $rojo-error: #b52217;
+        $rojo-button: #da291c;
+        $azul-base: #006e7a;
+        $gris-desactivado: #b9b9b9;
+        $font-family-amx-bold: "AMX-bold";
+
+        $breakpoint-desktop-sm: "(max-width: 1279px) and (min-width: 961px), (max-height: 767px)";
+        $breakpoint-desktop-lg: "screen and (min-width: 1367px)";
+        $breakpoint-desktop-to-tablet: "screen and (max-width: 1365px) and (min-width: 961px)";
+        $breakpoint-tablet-lg: "only screen and (max-width: 960px)";
+        $breakpoint-tablet-sm: "only screen and (max-width: 768px)";
+        $breakpoint-mobile: "only screen and (max-width: 430px)";
+
+        %text-styles {
+            line-height: 19px;
+            height: 19px;
+            padding: 1.5px 0;
+        }
+
+        %input {
+            width: 100%;
+            height: 38px;
+            border: 1px solid $gris-borde;
+            border-radius: 12px;
+            padding: 10px 12px 8px 10px;
+            transition: border-color 0.3s ease;
+            line-height: 40px;
+
+            &::placeholder {
+                color: $gris-borde;
+            }
+
+            @media #{$breakpoint-desktop-sm} {
+                padding-left: 14px;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 160px;
+
+        label {
+            margin-bottom: 8px;
+            @extend %text-styles;
+        }
+
+        .container-filters-input {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            @media #{$breakpoint-mobile},
+			#{$breakpoint-tablet-sm} {
+                width: 100%;
+            }
+
+            input[type="text"],
+            input[type="date"] {
+                @extend %input;
+
+                &:focus {
+                    border: 1px solid $gris-borde;
+                    outline: none;
+                }
+
+                @media #{$breakpoint-mobile}, #{$breakpoint-tablet-sm} {
+                    width: 100%;
+                }
+
+                &:disabled {
+                    background-color: white;
+                    cursor: not-allowed;
+                }
+            }
+
+            input[type="date"] {
+                text-transform: uppercase;
+
+                &::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                }
+
+                color: $gris-borde;
+
+                &.with-value {
+                    color: $gris-oscuro;
+                }
+            }
+
+            .button-icon {
+                position: absolute;
+                right: 12px;
+                width: fit-content;
+                padding: 0;
+                margin: 0;
+                border: none;
+                background-color: transparent;
+
+                //& focus
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
