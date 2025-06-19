@@ -1,0 +1,167 @@
+{
+   "fieldSets": [
+      {
+         "fields": [
+			           {
+                  "name": "usarTituloCard",
+									"label": "Ver título",
+					        "description": "Seleccione si desea ver el Título.",					 
+                  "type": "checkbox",
+					        "defaultValue": true 
+                  }, 
+					        {
+                   "name": "etiquetaTituloCard",
+                   "label": "Etiqueta título de la card",
+                   "description": "Seleccione la etiqueta para el título",
+                   "type": "select",
+                   "dataType": "string",
+                   "defaultValue": "H2",
+                   "typeOptions": {
+                   "validValues": [
+                   { "label": "H1", "value": "h1" },
+                   { "label": "H2", "value": "h2" },
+                   { "label": "H3", "value": "h3" },
+                   { "label": "H4", "value": "h4" },
+                   { "label": "H5", "value": "h5" },
+                   { "label": "H6", "value": "h6" },
+                   { "label": "P", "value": "p" },
+                   { "label": "Span", "value": "span" }
+                                 ]
+                          }
+									},
+					        {
+			            "name": "textotituloCard",
+									"defaultValue": "Ingrese Titulo Card",
+                  "label": "Texto Título",
+									"type": "text",
+					        "description": "(Máximo 20 caracteres)"
+		              }, 
+					        {
+									"name": "colorTituloCard",
+                  "label": "Color del Título",
+					        "description": "color-título",					 
+                  "type": "colorPicker",
+					        "defaultValue": "#069",
+									},
+						      			           
+		           ],
+          "label": "Configurar título Card"
+      },
+		  {
+         "fields": [
+			           {
+                  "name": "usarParrafoCard",
+									"label": "Ver párrafo",
+					        "description": "Seleccione si desea ver el párrafo.",					 
+                  "type": "checkbox",
+					        "defaultValue": true 
+                  }, 
+					        {
+			            "name": "parrafoCard",
+									"defaultValue": "Ingrese el párrafo de la card",
+                  "label": "Texto párrafo",
+			            "type": "text",
+					        "description": "(Máximo 70 caracteres)"
+		              }, 
+					        {
+									"name": "colorParrafoCard",
+                  "label": "Color del párrafo",
+					        "description": "color-Parrafo",					 
+                  "type": "colorPicker",
+					        "defaultValue": "#76777c",
+									}
+		          ],
+          "label": "Configurar párrafo Card"
+      },
+		 {
+      "fields": [
+        {
+          "name": "useButton",
+          "label": "Usar Botón",
+          "description": "Seleccione si desea usar el botón.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
+        {
+          "name": "sizeButton",
+          "label": "talla de botón",
+          "description": "Seleccione una talla de botón a usar.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "s", "label": "Talla s" },
+              { "value": "m", "label": "Talla m" },
+              { "value": "l", "label": "Talla l" }
+            ]
+          },
+          "defaultValue": "l"
+        },
+        {
+          "name": "typeButton",
+          "label": "Tipo de botón",
+          "description": "Seleccione un tipo de botón a usar.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "primary", "label": "Primario" },
+              { "value": "secondary", "label": "Secundario" }
+              ]
+          },
+          "defaultValue": "primary"
+        },
+        {
+          "name": "iconButton",
+          "label": "Con ícono",
+          "description": "Seleccione si desea usar un ícono en el botón.",
+          "type": "checkbox",
+          "defaultValue": false
+        },
+        {
+          "name": "locationIcon",
+          "label": "Ubicación del ícono",
+          "description": "Seleccione dónde desea ubicar el ícono.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "right", "label": "Derecha" },
+              { "value": "left", "label": "Izquierda" }
+            ]
+          },
+          "defaultValue": "left"
+        },
+        {
+          "name": "textButton",
+          "label": "Agregue el texto del botón",
+          "description": "Ingrese el texto que va a tener el botón. 20 caracteres Max.",
+          "type": "text",
+     "defaultValue": "Saber más"
+        },
+        {
+          "name": "urlButton",
+          "label": "Agregue la url del botón",
+          "description": "Ingrese la url que va a tener el botón",
+          "type": "text",
+          "defaultValue": "https://..."
+        },
+        {
+          "name": "typeOpenUrl",
+          "label": "Abrir en una nueva pestaña",
+          "description": "Seleccione este campo para abrir en una nueva pestaña",
+          "type": "checkbox",
+          "defaultValue": false
+        },
+        {
+          "name": "disabledButton",
+          "label": "Desea deshabilitar  el botón",
+          "description": "Seleccione este campo si desea deshabilitar el botón",
+          "type": "checkbox",
+          "defaultValue": false
+        }
+      ],
+      "label": "Configuración del botón"
+    }
+]
+}

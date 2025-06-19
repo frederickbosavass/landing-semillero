@@ -1,0 +1,126 @@
+.andrea-card *{
+  margin:0;
+  padding:0;
+}
+
+.andrea-card {
+	display: flex;
+  gap: 20px;
+  padding: 0px 40px;
+ justify-content: center;
+	}
+
+.andrea-card__section {
+	  display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    width: 250px;
+    flex-direction: column;
+	  max-height: 460px;
+	  background-color: white;
+}
+
+.andrea-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.andrea-card_content {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.andrea-card__header {
+  text-align: center;
+}
+
+.andrea-card__header .andrea-card__title {
+    font-size: 1.25rem;
+    color: #888;
+	  font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+	  margin-top: 5%;
+	  text-align: center;
+}
+/*
+.andrea-card__header .andrea-card__title::after {
+   content: "";
+   width: 50%;
+   height: 2px;
+   background: #287d3c;
+   position: absolute;
+   top: 130%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+*/
+.andrea-card__description {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.andrea-card__description .andrea-card__text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #bf0404;
+  margin-bottom: 10px;
+  text-align: center;
+	
+}
+
+.andrea-card__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.s-c-button {
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+	text-decoration:none;
+}
+
+.s-t-button__size-s {
+	padding: 5px 12px;
+}
+
+.s-t-button__size-m {
+	padding: 7px 15px;
+}
+
+.s-t-button__size-l {
+	padding: 10px 24px;
+}
+
+.s-t-button__primary {
+	background-color: #039be2;
+	color: #fff;
+}
+.s-t-button__primary:hover {
+  background-color: #069;
+	color: #fff;
+	text-decoration:none;
+}
+
+.s-t-button__secondary {
+	background-color: #069;
+	color: #ffff;
+}
+
+.s-t-button__secondary:hover {
+  background-color: #b5b5b7;
+}
