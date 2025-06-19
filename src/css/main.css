@@ -2428,3 +2428,78 @@ html {
     min-width: auto;
   }
 }
+
+.theme-s .s-c-card-esteban .main-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.theme-s .s-c-card-esteban .card {
+  width: 190px;
+  background: white;
+  padding: 0.4em;
+  border-radius: 6px;
+}
+.theme-s .s-c-card-esteban .card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+.theme-s .s-c-card-esteban .card-image:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.theme-s .s-c-card-esteban .category {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+.theme-s .s-c-card-esteban .category:hover {
+  cursor: pointer;
+}
+.theme-s .s-c-card-esteban .heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+.theme-s .s-c-card-esteban .heading:hover {
+  cursor: pointer;
+}
+.theme-s .s-c-card-esteban .author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+.theme-s .s-c-card-esteban .name {
+  font-weight: 600;
+}
+.theme-s .s-c-card-esteban .name:hover {
+  cursor: pointer;
+}
+
+.theme-s .s-c-card-william {
+  max-width: 300px;
+  border-width: 2px;
+  border-radius: 15px;
+  -o-border-image: linear-gradient(to left, #85c1e9, #00f, #bb8fce);
+     border-image: -webkit-gradient(linear, right top, left top, from(#85c1e9), color-stop(#00f), to(#bb8fce));
+     border-image: linear-gradient(to left, #85c1e9, #00f, #bb8fce);
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.theme-s .s-c-card-william img {
+  width: 100%;
+}
+.theme-s .s-c-card-william .body {
+  padding: 15px;
+}
+.theme-s .s-c-card-william .footer {
+  padding: 0 15px 15px 15px;
+  text-align: right;
+}

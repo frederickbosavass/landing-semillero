@@ -1,0 +1,96 @@
+{
+ "fieldSets": [
+  {
+      "fields": [
+        {
+          "name": "useButton",
+          "label": "Usar Botón",
+          "description": "Seleccione si desea usar el botón.",
+          "type": "checkbox",
+          "defaultValue": true
+        },
+        {
+          "name": "sizeButton",
+          "label": "talla de botón",
+          "description": "Seleccione una talla de botón a usar.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "s", "label": "Talla s" },
+              { "value": "m", "label": "Talla m" },
+              { "value": "l", "label": "Talla l" }
+            ]
+          },
+          "defaultValue": "l"
+        },
+        {
+          "name": "typeButton",
+          "label": "Tipo de botón",
+          "description": "Seleccione un tipo de botón a usar.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "primary", "label": "Primario" },
+              { "value": "primary--white", "label": "Primario Blanco" },
+              { "value": "secondary", "label": "Secuandario" },
+              { "value": "secondary--white", "label": "Secundario Blanco" }
+            ]
+          },
+          "defaultValue": "primary"
+        },
+        {
+          "name": "iconButton",
+          "label": "Con ícono",
+          "description": "Seleccione si desea usar un ícono en el botón.",
+          "type": "checkbox",
+          "defaultValue": false
+        },
+        {
+          "name": "locationIcon",
+          "label": "Ubicación del ícono",
+          "description": "Seleccione dónde desea ubicar el ícono.",
+          "type": "select",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              { "value": "right", "label": "Derecha" },
+              { "value": "left", "label": "Izquierda" }
+            ]
+          },
+          "defaultValue": "left"
+        },
+        {
+          "name": "textButton",
+          "label": "Agregue el texto del botón",
+          "description": "Ingrese el texto que va a tener el botón. 24 caracteres Max.",
+          "type": "text",
+     "defaultValue": "Saber más"
+        },
+        {
+          "name": "urlButton",
+          "label": "Agregue la url del botón",
+          "description": "Ingrese la url que va a tener el botón",
+          "type": "text",
+          "defaultValue": "https://..."
+        },
+        {
+          "name": "typeOpenUrl",
+          "label": "Abrir en una nueva pestaña",
+          "description": "Seleccione este campo para abrir en una nueva pestaña",
+          "type": "checkbox",
+          "defaultValue": false
+        },
+        {
+          "name": "disabledButton",
+          "label": "Desea deshabilitar  el botón",
+          "description": "Seleccione este campo si desea deshabilitar el botón",
+          "type": "checkbox",
+          "defaultValue": false
+        }
+      ],
+      "label": "Configuración del botón"
+    }
+ ]
+}
