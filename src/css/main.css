@@ -2503,3 +2503,23 @@ html {
   padding: 0 15px 15px 15px;
   text-align: right;
 }
+
+.theme-s .s-c-card-juan .card-container {
+  width: 170px;
+  text-align: center;
+  border-radius: 5px;
+}
+.theme-s .s-c-card-juan .card {
+  padding: 20px;
+  background: linear-gradient(19deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  color: #fff;
+}
+.theme-s .s-c-card-juan .boton {
+  border-radius: 6px;
+  background-color: #00D4FF;
+  border: none;
+  color: #fff;
+  padding: 5px 30px 5px 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
