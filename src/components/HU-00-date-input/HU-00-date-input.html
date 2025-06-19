@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DateInput Vanilla JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/clay.css" />
+    <script src="../../js/libraries/jquery.min.js"></script>
+    <script src="../../js/compile-dist.js"></script>
+  </head>
+  <body class="theme-s">
+    <div class="s-c-filter">
+      <label for="dateInput">Fecha:</label>
+      <div class="container-filters-input">
+        <input id="dateInput" type="date" min="2024-06-01" max="2025-06-18" />
+        <button id="calendarButton" class="button-icon" aria-label="Abrir calendario">
+          <!-- Ícono SVG del calendario -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            id="calendarIcon"
+          >
+            <path
+              d="M420.57,46h-2V45a1,1,0,0,0-2,0v1h-6V45a1,1,0,0,0-2,0v1h-2a3,3,0,0,0-3,3V63a3,3,0,0,0,3,3h14a3,3,0,0,0,3-3V49a3,3,0,0,0-3-3m-14,2h2v1a1,1,0,0,0,2,0V48h6v1a1,1,0,0,0,2,0V48h2a1,1,0,0,1,1,1v3h-16V49a1,1,0,0,1,1-1m14,16h-14a1,1,0,0,1-1-1V54h16v9a1,1,0,0,1-1,1"
+              transform="translate(-401.57 -43)"
+              fill="#006e7a"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const input = document.getElementById("dateInput");
+      const button = document.getElementById("calendarButton");
+      const icon = document.getElementById("calendarIcon");
+
+      const isDisabled = false; // cambia a true si quieres desactivarlo
+
+      // Establecer estado inicial
+      input.disabled = isDisabled;
+      if (isDisabled) {
+        button.classList.add("disabled");
+        icon.classList.add("disabled");
+      }
+
+      // Evita usar flechas para cambiar fecha
+      input.addEventListener("keydown", function (e) {
+        if (
+          ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
+        ) {
+          e.preventDefault();
+        }
+      });
+
+      // Mostrar date picker cuando haces clic en el icono
+      button.addEventListener("click", function () {
+        if (isDisabled) return;
+        input.showPicker && input.showPicker(); // showPicker está disponible en navegadores modernos
+        input.focus();
+      });
+
+      // Escuchar cambio en el input
+      input.addEventListener("change", function () {
+        console.log("Fecha seleccionada:", input.value);
+        input.classList.toggle("with-value", !!input.value);
+      });
+    </script>
+  </body>
+</html>
