@@ -1,0 +1,78 @@
+[#assign classButtons = configuration.iconButton]
+[#assign disabledButtons = configuration.disabledButton]
+[#macro generateButton text size type icon disabledButtons iconAlight url target idLiferay idBtn ]
+[#if idBtn?has_content]
+[#assign idButton = "id='" + idBtn + "'"]
+[#else]
+[#assign idButton = ""]
+[/#if]
+[#if disabledButtons?string("true", "false") == "true"]
+[#assign disabledButton = "s-t-button--disabled"]
+[#assign hrefAttribute = ""]
+[#else]
+[#assign disabledButton = ""]
+[#assign hrefAttribute = "href='" + url + "'"]
+[/#if]
+[#assign myTarget = (target)?then("target='_blank'", "")]
+<a class="s-c-button s-o-button s-t-button__size-${size} s-t-button__${type} ${disabledButton}" ${idButton} ${hrefAttribute} ${myTarget}>
+    [#if icon && iconAlight == "left"]
+    <img src="" class="icon" alt="" aria-hidden="true" data-lfr-editable-id='${idLiferay}-left-${fragmentEntryLinkNamespace}' data-lfr-editable-type='image'>
+    [/#if]
+    ${stringUtil.shorten(htmlUtil.stripHtml(text), 32,"...")}
+    [#if icon && iconAlight == "right"]
+    <img src="" class="icon" alt="" aria-hidden="true" data-lfr-editable-id='${idLiferay}-right-${fragmentEntryLinkNamespace}' data-lfr-editable-type='image'>
+    [/#if]
+</a>
+[/#macro]
+[#--Bucle para generar las imagenes de aplicaciones--]
+<section class="andrea-card">
+    <article class="andrea-card__section">
+			[#--Imagen Principal - Editable--]
+      <img 
+				src=""
+        alt="Main dish"
+        data-lfr-editable-id="img-principal"
+        data-lfr-editable-type="image"
+				class="andrea-card__image"
+				/>			
+			  <div class="andrea-card__content">
+					
+        <header class="andrea-card__header">
+				  [#--Título-Editable--]
+				  [#assign tituloCard = configuration.textotituloCard/]
+					[#assign verTituloCard = configuration.usarTituloCard/]
+					[#assign colorTitulo = configuration.colorTituloCard/]
+					[#assign etiquetaTitulo = configuration.etiquetaTituloCard/]
+					[#if verTituloCard]
+				   	<${etiquetaTitulo} class="andrea-card__title" style="color: ${colorTitulo};">
+						${stringUtil.shorten(htmlUtil.stripHtml(tituloCard),20,"...")}
+							</${etiquetaTitulo}>
+					[/#if]
+        </header>						
+				  [#--Párrafo - Editable--]
+        <article class="andrea-card__description">					
+				  [#assign textoParrafo = configuration.parrafoCard]
+					[#assign verParrafoCard = configuration.usarParrafoCard]
+					[#assign colorParrafo = configuration.colorParrafoCard]
+					[#if verParrafoCard]
+          <p 
+						 class="andrea-card__text" style="color: ${colorParrafo};">
+            ${stringUtil.shorten(htmlUtil.stripHtml(textoParrafo),70,"...")}
+          </p>
+					[/#if]
+					        
+        </article>
+        <footer class="andrea-card__footer">
+          [#if configuration.useButton]
+          [#assign idButtonFinal="btn-banner-imagen-" + "${fragmentElementId}"]
+          [#-- start html --]
+          [#if classButtons?string("true", "false") == "true"]
+          [@generateButton configuration.textButton configuration.sizeButton configuration.typeButton+"-icon" configuration.iconButton configuration.disabledButton!false configuration.locationIcon configuration.urlButton configuration.typeOpenUrl 'btn-banner-imagen' idButtonFinal /]
+          [#else]
+          [@generateButton configuration.textButton configuration.sizeButton configuration.typeButton configuration.iconButton configuration.disabledButton!false configuration.locationIcon configuration.urlButton configuration.typeOpenUrl 'btn-banner-imagen' idButtonFinal /]
+          [/#if]
+          [/#if]
+        </footer>
+      </div>
+    </article>       
+ </section>
